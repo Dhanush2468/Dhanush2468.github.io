@@ -1,0 +1,337 @@
+/* Improved CSS Styles */
+.result-container-1{
+  margin-bottom: 10px;
+}
+.loading-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-page::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top: -50;
+  left: -50;
+  z-index: -1;
+  background-image: url('https://cdn.dribbble.com/users/1123394/screenshots/3592603/looped-blue_prolific_interactive.gif'); /* Set the background image */
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  animation: rotatingColors 10s linear infinite;
+
+}
+
+
+/* Responsive rule for smaller screens */
+@media only screen and (max-width: 600px) {
+  .loading-page::before {
+    width: 210%;
+    height: 100%;
+  }
+}
+
+@keyframes rotatingColors {
+  0% { background-position: 200% 0; }
+  100% { background-position: 0 200%; }
+}
+
+.loading-icon {
+  width: 50px; /* Default width */
+  height: 50px; /* Default height */
+ 
+}
+@keyframes waveAnimation {
+  0%, 100% {
+    transform: translateY(0); /* Start and end position */
+  }
+  50% {
+    transform: translateY(-10px); /* Middle position, wave height */
+  }
+}
+
+/* Responsive rules for smaller screens */
+@media only screen and (max-width: 600px) {
+  .loading-icon {
+    width: 60px; /* Decreased width for mobile */
+    height: 60px; /* Decreased height for mobile */
+  }
+}
+
+.ant-input-element{
+  font-style: bold;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  resize: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  &::-webkit-resizer {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-button {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+}
+.color-tag {
+  background: linear-gradient(to right bottom, darken(#b6fbff, 40), darken(#83a4d4, 20));
+  height: auto;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+
+  h1, h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #83a4d4;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+
+  .form-child {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .ant-form-element {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      padding: 18px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      box-shadow: 7px 7px 10px rgba($color: #83a4d4, $alpha: 1), -7px -7px 10px rgba($color: #b6fbff, $alpha: 1);
+
+      .ant-form-btn {
+        .icon-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .icon {
+            rotate: 90deg;
+          }
+        }
+      }
+
+      .ant-input {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      #urlInput {
+        margin: 0 !important;
+        border: none !important;
+        outline: none !important;
+
+        &:disabled {
+          background-color: white !important;
+        }
+      }
+    }
+
+    .ant-selector-element {
+      margin: 10px;
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+  }
+
+  .result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .loading-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+
+      .loading {
+        height: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        div {
+          height: 30px;
+          width: 30px;
+          position: absolute;
+          animation: move 4s infinite;
+        }
+
+        div:nth-child(1) {
+          background-color: rgb(158, 136, 246);
+          box-shadow: rgb(158, 136, 246) 0px 7px 29px 0px;
+          transform: translate(-30px, -30px);
+          animation-delay: -1s;
+        }
+
+        div:nth-child(2) {
+          background-color: rgb(97, 183, 253);
+          box-shadow: rgb(97, 183, 253) 0px 7px 29px 0px;
+          transform: translate(30px, -30px);
+          animation-delay: -2s;
+        }
+
+        div:nth-child(3) {
+          background-color: rgb(95, 249, 175);
+          box-shadow: rgb(95, 249, 175) 0px 7px 29px 0px;
+          transform: translate(30px, 30px);
+          animation-delay: -3s;
+        }
+
+        div:nth-child(4) {
+          background-color: rgb(243, 171, 89);
+          box-shadow: rgb(243, 171, 89) 0px 7px 29px 0px;
+          transform: translate(-30px, 30px);
+          animation-delay: -4s;
+        }
+      }
+    }
+
+    .result-element {
+      max-width: 60%;
+      object-fit: contain;
+      height: 100%;
+      box-shadow: 5px 5px 15px rgba($color: #000000, $alpha: 0.2);
+      border-radius: 10px;
+      margin-bottom: 10px;
+
+
+      &.document {
+        height: 500px;
+      }
+    }
+
+    .file-download-btn {
+      padding: 10px 30px;
+      margin: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right bottom, darken(#bafd00, 40), darken(#83a4d4, 20));
+
+      .download-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-30px, -30px);
+  }
+
+  25% {
+    transform: translate(30px, -30px);
+  }
+
+  50% {
+    transform: translate(30px, 30px);
+  }
+
+  75% {
+    transform: translate(-30px, 30px);
+  }
+
+  100% {
+    transform: translate(-30px, -30px);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .form-container {
+    .result-container {
+      .result-element {
+        max-width: 80%;
+      }
+    }
+  }
+}
