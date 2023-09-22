@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+    <style>
+        /* Shared styles for all screen sizes */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 91px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70%;
+            margin-top: 20px;
+        }
+
+        .image {
+            max-width: 20%;
+            max-height: 20%;
+            width: auto;
+            height: auto;
+            margin: 0 20px;
+        }
+
+        .bottom-text {
+            margin-top: 50px;
+            font-size: 24px;
+        }
+
+        .ascii-art {
+            font-family: monospace;
+            font-size: 18px;
+            white-space: pre;
+        }
+
+        .lightning {
+            display: inline-block;
+            position: relative;
+            margin-top: 20px;
+            margin-right: 185px;
+            width: 190px;
+            height: 2px;
+            background-color: #00ff00;
+            animation: lightning 2s linear infinite alternate;
+        }
+
+        .left-right {
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+        }
+
+        .left, .right {
+            max-width: 35%;
+            max-height: 35%;
+            width: auto;
+            height: auto;
+        }
+
+          
+        
+
+        .center {
+            width: 450px;
+            height: 400px;
+            margin-top: -30px;
+        }
+
+        @keyframes lightning {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 200px;
+            }
+        }
+
+        /* Responsive styles for mobile devices */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 48px; /* Adjust font size for mobile screens */
+            }
+
+            .image-container {
+                flex-direction: column; /* Stack images vertically on mobile screens */
+                align-items: center;
+                width: 90%; /* Adjust the width for mobile screens */
+            }
+
+            .image {
+                max-width: 100%; /* Make images fluidly adjust to screen width */
+                height: auto;
+                margin: 10px 0; /* Add space between the images */
+            }
+
+            .bottom-text {
+                margin-top: 20px;
+                font-size: 18px; /* Adjust font size for mobile screens */
+            }
+
+            .ascii-art {
+                font-size: 14px; /* Adjust font size for mobile screens */
+            }
+
+            .lightning {
+                margin-right: 0;
+                width: 50%; /* Adjust the width for mobile screens */
+            }
+
+           
+
+            .center {
+                width: 90%; /* Adjust the width for mobile screens */
+                max-width: 90%; /* Limit the maximum width for mobile screens */
+                height: auto;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>H4(k3d 8y Wh!73__D3v!1</h1>
+    <div class="image-container">
+        <img class="left" src="https://www.onlygfx.com/wp-content/uploads/2020/05/hacked-stamp-1.png" alt="Left Image">
+        <img class="center" src="Screenshot 2023-09-20 205006.png" alt="Your Logo">
+        <img class="right" src="https://www.onlygfx.com/wp-content/uploads/2020/05/hacked-stamp-1.png" alt="Right Image">
+    </div>
+    <div class="main-container">
+        <p class="bottom-text">You Are Hacked BY</p>
+        <pre class="ascii-art">
+       
+    '||      ||` '||  ||` |''||''| |''||''| '||''''|         '||'''|. '||''''| \\      // |''||''| '||     
+     ||      ||   ||  ||     ||       ||     ||   .           ||   ||  ||   .   \\    //     ||     ||     
+     ||  /\  ||   ||''||     ||       ||     ||'''|           ||   ||  ||'''|    \\  //      ||     ||     
+      \\//\\//    ||  ||     ||       ||     ||               ||   ||  ||         \\//       ||     ||     
+       \/  \/    .||  ||. |..||..|   .||.   .||....|         .||...|' .||....|     \/     |..||..| .||...| 
+                                                    ........                                              
+                                                                                                          
+                         <div class="lightning"></div>
+                </pre>
+    </div>
+</body>
+</html>
